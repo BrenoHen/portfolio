@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('font/Mulish-Italic-VariableFont_wght.ttf') format('woff2'),
+}
+
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.842);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+}
+
+/* container com todos os itens da pagina */
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 50px;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.842);
+    color: white;
+    max-width: 1200px;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 10px;
+}
+
+/* apresentacao foto, nome e profissao */
+#apresentacao{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+p#nome-profissao{
+    font-size: 40px;
+}
+
+#img-breno{
+    width: 300px;
+    height: 300px;
+}
+
+#sobre{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#habilidades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-Habilidades{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.img-html{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.img-css{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.img-javascript{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.img-git{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
