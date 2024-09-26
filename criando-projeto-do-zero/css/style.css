@@ -1,6 +1,24 @@
 @font-face {
     font-family: 'Mulish';
-    src: url('font/Mulish-Italic-VariableFont_wght.ttf') format('woff2'),
+    src: url('font/Mulish-VariableFont_wght.ttf')format('woff2'),
+    url('font/Mulish-Italic-VariableFont_wght.ttf')format('woff2'),
+}
+
+/* variaveis globais */
+:root{
+    --cor-de-fundo: #1d1925;
+    --cor-do-container: #2f293b;
+    --cor-do-header: #2f293b;
+
+    --meu-degrade-1: linear-gradient(to bottom, #1d1925, #2F293B);
+    --meu-degrade-2: linear-gradient(to bottom,#1d1925, #372A50);
+    --meu-degrade-3: linear-gradient(to bottom,#1E1A26, #372A50);
+
+    /* #1E1A26 */
+    
+    --cor-do-titulo-1: white;
+    --cor-do-titulo-2: white;
+    --cor-do-texto-1: white;
 }
 
 body, ul, li, p{
@@ -8,20 +26,25 @@ body, ul, li, p{
     padding: 0px;
     list-style: none;
     font-size: 1.2rem;
-    font-family: Arial;
+    font-family: 'Mulish';
 }
 
 body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow-x: hidden; 
+
+    background: var(--meu-degrade-2);
+    
 }
 
 .header{
     position: absolute;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.842);
+    background: var(--meu-degrade-1);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -31,12 +54,22 @@ body{
 
 a{
     text-decoration: none;
-    color: white;
+    color: var(--cor-do-texto-1);
+}
+
+#logo{
+    margin-left: 40px;
 }
 
 h1{
     text-align: center;
     margin-top: 50px;
+    color: var(--cor-do-titulo-1);
+}
+
+h2{
+    color: var(--cor-do-titulo-2);
+
 }
 
 img{
@@ -47,6 +80,7 @@ img{
 
 .menu{
     display: flex;
+    margin-right: 40px;
 }
 
 .menu li{
@@ -63,15 +97,21 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
+
     margin-top: 100px;
     padding: 50px;
-    flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.842);
-    color: white;
+    
+    /* background-color:var(--cor-do-container); */
+    background: var(--meu-degrade-3);
+    color: var(--cor-do-texto-1);
+    
     max-width: 1200px;
     width: 100%;
     min-height: 100vh;
-    border-radius: 10px;
+    
+    /* box-shadow: 0 4px 15px black; */
+    /* border-radius: 10px; */
 }
 
 /* apresentacao foto, nome e profissao */
@@ -81,27 +121,34 @@ img{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 80px;
+    margin-top: 150px;
 }
 
 p#nome-profissao{
     font-size: 40px;
+    color: var(--cor-do-texto-1);
 }
 
 #img-breno{
     width: 300px;
     height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px black;
 }
 
 #sobre{
     text-align: center;
-    margin-bottom: 80px;
+    margin-top: 150px;
+    font-size: 30px;
+    color: var(--cor-do-texto-1);
+    
 }
 
 #habilidades{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 150px;
 }
 
 .img-Habilidades{
@@ -132,4 +179,18 @@ p#nome-profissao{
     width: 200px;
     height: 200px;
     text-align: center;
+}
+
+#projetos{
+    margin-top: 150px;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#contato{
+    margin-top: 150px;
+    align-items: center;
+    text-align: center;
+    
 }
