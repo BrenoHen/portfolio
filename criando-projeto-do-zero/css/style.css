@@ -194,3 +194,124 @@ p#nome-profissao{
     text-align: center;
     
 }
+
+/* Mobile Menu Button */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: var(--cor-do-texto-1);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Cuidando da responsividade 1020px */
+
+@media screen and (max-width: 1020px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    #container{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        margin-top: 0px;
+        padding: 0px;
+        align-items: center;
+        margin-top: 0px;
+        
+        /* background-color:var(--cor-do-container); */
+        background: var(--meu-degrade-3);
+        color: var(--cor-do-texto-1);
+        
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+    #apresentacao{
+        flex-direction: column-reverse;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #nome-profissao{
+        margin-top: 25px;
+        text-align: center;
+    }
+    
+    #sobre{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+
+    /* Header */
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: var(--cor-do-container);
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        margin-right: 40px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .img-Habilidades {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-html, .img-css, .img-javascript, .img-git {
+        width: 100px;
+        height: 100px;
+        margin: 10px 0;
+    }
+
+    #sobre, #projetos, #contato {
+        padding: 20px;
+        text-align: center;
+    }
+
+    p#nome-profissao {
+        font-size: 1.5rem;
+    }
+
+    #img-breno {
+        width: 200px;
+        height: 200px;
+    }
+}
