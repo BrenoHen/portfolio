@@ -1,8 +1,12 @@
-@font-face {
+/* @font-face {
     font-family: 'Mulish';
     src: url('font/Mulish-VariableFont_wght.ttf')format('woff2'),
     url('font/Mulish-Italic-VariableFont_wght.ttf')format('woff2'),
-}
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 /* variaveis globais */
 :root{
@@ -20,6 +24,8 @@
     --cor-do-titulo-1: white;
     --cor-do-titulo-2: white;
     --cor-do-texto-1: white;
+
+    font-family: "Poppins", sans-serif;
 }
 
 body, ul, li, p{
@@ -27,7 +33,7 @@ body, ul, li, p{
     padding: 0px;
     list-style: none;
     font-size: 1.2rem;
-    font-family: 'Mulish';
+    font-family: 'Poppins' sans-serif;
 }
 
 body{
@@ -134,11 +140,13 @@ img{
 }
 
 p#nome-profissao{
+    margin: 30px;
     font-size: 40px;
     color: var(--cor-do-texto-1);
 }
 
 #img-breno{
+    margin: 30px;
     width: 300px;
     height: 300px;
     border-radius: 15px;
@@ -221,7 +229,7 @@ p#nome-profissao{
 
 /* Cuidando da responsividade 1020px */
 
-@media screen and (max-width: 1020px){
+@media screen and (max-width: 1140px){
 
     body{
         overflow-x: hidden;
