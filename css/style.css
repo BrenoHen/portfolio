@@ -374,5 +374,18 @@ p#nome-profissao{
     .img-Habilidades {
         grid-template-columns: 1fr;
     }
+
+    .img-html, .img-css, .img-javascript, .img-git{
+        animation: none;
+        width: 100px;
+        height: 100px;
+        transition: 0.8s;
+    }
+
+    .img-html:hover, .img-css:hover, .img-javascript:hover, .img-git:hover{
+        width: 110px;
+        height: 110px;
+        padding: 10px;
+    }
 }
 
