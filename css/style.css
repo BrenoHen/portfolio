@@ -1,18 +1,10 @@
-/* @font-face {
-    font-family: 'Mulish';
-    src: url('font/Mulish-VariableFont_wght.ttf')format('woff2'),
-    url('font/Mulish-Italic-VariableFont_wght.ttf')format('woff2'),
-} */
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
     scroll-behavior: smooth;
 }
 
-
-/* variaveis globais */
+/* Variáveis globais */
 :root{
     --cor-de-fundo: #1d1925;
     --cor-do-container: #2f293b;
@@ -23,11 +15,8 @@ html {
     --meu-degrade-3: linear-gradient(to bottom,#1E1A26, #372A50);
     --meu-degrade-menu-1: #1d1925de;
 
-    /* #1E1A26 */
-    
     --cor-do-titulo-1: white;
     --cor-do-titulo-2: white;
-
     
     --cor-do-titulo-1-hover: #674890;
     --cor-do-titulo-2-hover: #ffcc00;
@@ -48,11 +37,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    overflow-x: hidden; 
-
+    overflow-x: hidden;
     background: var(--meu-degrade-2);
-    
 }
 
 .header{
@@ -61,7 +47,6 @@ body{
     width: 100%;
     background: var(--meu-degrade-1);
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -84,7 +69,7 @@ h1{
 
 h2{
     color: var(--cor-do-titulo-2);
-    transition: 0.3s
+    transition: 0.3s;
 }
 
 h2:hover{
@@ -95,7 +80,6 @@ img{
     max-width: 100%;
     display: block;
 }
-
 
 .menu{
     display: flex;
@@ -119,29 +103,22 @@ img{
     border-radius: 20px;
 }
 
-/* container com todos os itens da pagina */
+/* Container com todos os itens da página */
 #container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-
     margin-top: 100px;
     padding: 50px;
-    
-    /* background-color:var(--cor-do-container); */
     background: var(--meu-degrade-3);
     color: var(--cor-do-texto-1);
-    
     max-width: 1200px;
     width: 100%;
     min-height: 100vh;
-    
-    /* box-shadow: 0 4px 15px black; */
-    /* border-radius: 10px; */
 }
 
-/* apresentacao foto, nome e profissao */
+/* Apresentação foto, nome e profissão */
 #apresentacao{
     display: flex;
     flex-direction: row;
@@ -176,7 +153,6 @@ p#nome-profissao{
     margin-top: 150px;
     font-size: 30px;
     color: var(--cor-do-texto-1);
-    
 }
 
 #habilidades{
@@ -189,19 +165,18 @@ p#nome-profissao{
 .img-Habilidades{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 20px;
-    height: 200px;
-    align-items: center;
 }
 
-.img-html, .img-css, .img-css, .img-javascript, .img-git{
+.img-html, .img-css, .img-javascript, .img-git{
     width: 150px;
     height: 150px;
     padding: 20px;
     color: #ffcc00;
     text-align: center;
-    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(75%);
     transition: 0.7s;
 }
 
@@ -212,18 +187,10 @@ p#nome-profissao{
     -webkit-filter: grayscale(0%);
 }
 
-#projetos{
+#projetos, #contato{
     margin-top: 150px;
     align-items: center;
     text-align: center;
-    
-}
-
-#contato{
-    margin-top: 150px;
-    align-items: center;
-    text-align: center;
-    
 }
 
 /* Mobile Menu Button */
@@ -231,6 +198,16 @@ p#nome-profissao{
     display: none;
     cursor: pointer;
     margin-right: 40px;
+}
+
+.menu-icon p {
+    color: white;
+    transition: 0.3s;
+}
+
+.menu-icon p:hover{
+    background-color: #ffcc002f;
+    border-radius: 3px;
 }
 
 .menu-icon div {
@@ -242,29 +219,12 @@ p#nome-profissao{
 }
 
 /* Cuidando da responsividade 1020px */
-
 @media screen and (max-width: 1140px){
-
-    body{
-        overflow-x: hidden;
-    }
-
     #container{
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-        
         margin-top: 0px;
         padding: 0px;
         align-items: center;
-        margin-top: 0px;
-        
-        /* background-color:var(--cor-do-container); */
         background: var(--meu-degrade-3);
-        color: var(--cor-do-texto-1);
-        
         width: 100%;
         min-height: 100vh;
     }
@@ -272,26 +232,28 @@ p#nome-profissao{
     #apresentacao{
         flex-direction: column-reverse;
         justify-content: center;
-        flex-wrap: wrap;
     }
     
-    #nome-profissao{
+    p#nome-profissao{
         margin-top: 25px;
         text-align: center;
+        font-size: 1.5rem;
     }
     
-    #sobre{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        
+    #img-breno{
+        width: 200px;
+        height: 200px;
+        transition: 0.6s;
     }
 
-    /* Header */
-    .header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    #img-breno:hover{
+        width: 210px;
+        height: 210px;
+    }
+
+    #sobre, #projetos, #contato{
+        padding: 20px;
+        text-align: center;
     }
 
     .menu {
@@ -303,12 +265,11 @@ p#nome-profissao{
         width: 100%;
         background: var(--meu-degrade-menu-1);
         border-radius: 20px;
-
         max-height: 0;
         overflow: hidden;
         opacity: 0;
         transition: max-height 0.5s ease, opacity 0.5s ease;
-        z-index: 10
+        z-index: 10;
     }
     
     .menu.active {
@@ -320,16 +281,6 @@ p#nome-profissao{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        color: white;
-    }
-
-    .menu-icon p{
-        transition: 0.3s;
-    }
-
-    .menu-icon p:hover{
-        background-color: #ffcc002f;
-        border-radius: 3px;
     }
 
     .menu li {
@@ -350,45 +301,40 @@ p#nome-profissao{
         color: #ffcc00;
         border-radius: 5px;
     }
-    
 
-    .img-Habilidades {
-        display: flexbox;
+    .img-Habilidades{
+        display: flex;
+        justify-content: center;
     }
 
-    .img-html, .img-css, .img-javascript, .img-git {
-        width: 145px;
-        height: 145px;
-        margin: 10px 0;
-        -webkit-filter: grayscale(75%);
-        transition: 0.5s;
+    .img-html, .img-css, .img-javascript, .img-git{
+        width: 120px;
+        height: 120px;
     }
+}
 
-    .img-html:hover, .img-css:hover, .img-javascript:hover, .img-git:hover{
-        -webkit-filter: grayscale(0%);
-        color: #ffcc00;
-        width: 150px;
-        position: relative;
-    }
-
-    #sobre, #projetos, #contato {
-        padding: 20px;
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px){
+    #apresentacao{
+        flex-direction: column;
         text-align: center;
     }
 
-    p#nome-profissao {
+    p#nome-profissao{
         font-size: 1.5rem;
     }
 
-    #img-breno {
-        width: 200px;
-        height: 200px;
-        transition: 0.6s;
-        z-index: 1
+    #img-breno{
+        width: 180px;
+        height: 180px;
     }
 
-    #img-breno:hover {
-        width: 210px;
-        height: 210px;
+    .img-html, .img-css, .img-javascript, .img-git{
+        width: 100px;
+        height: 100px;
+    }
+
+    .menu-icon {
+        display: block;
     }
 }
