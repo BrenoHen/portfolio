@@ -316,7 +316,7 @@ p#nome-profissao{
 /* Ajustes para telas menores */
 @media screen and (max-width: 768px){
     #apresentacao{
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
     }
 
@@ -329,9 +329,21 @@ p#nome-profissao{
         height: 180px;
     }
 
+    .img-Habilidades {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+        margin-top: 20px;
+    }
+
     .img-html, .img-css, .img-javascript, .img-git{
         width: 100px;
         height: 100px;
+    }
+
+    .img-html:hover, .img-css:hover, .img-javascript:hover, .img-git:hover{
+        padding: 0px;
     }
 
     .menu-icon {
