@@ -206,7 +206,7 @@ p#nome-profissao{
 }
 
 .menu-icon p:hover{
-    background-color: #ffcc002f;
+    color: #ffcc00;
     border-radius: 3px;
 }
 
