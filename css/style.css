@@ -174,17 +174,35 @@ p#nome-profissao{
     width: 150px;
     height: 150px;
     padding: 20px;
-    color: #ffcc00;
+    color: white;
     text-align: center;
+    animation-delay: 3s;
     -webkit-filter: grayscale(75%);
-    transition: 0.7s;
+    transition: width 0.5s ease, height 0.5s ease, -webkit-filter 0.5s ease;
+    animation: hoverEffect 3s ease-in-out infinite;
 }
 
-.img-html:hover, .img-css:hover, .img-javascript:hover, .img-git:hover{
+
+@keyframes hoverEffect {
+    0%, 100% {
+        width: 150px;
+        height: 150px;
+        -webkit-filter: grayscale(75%);
+    }
+    50% {
+        width: 175px;
+        height: 175px;
+        -webkit-filter: grayscale(0%);
+    }
+}
+
+.img-html:hover, .img-css:hover, .img-javascript:hover, .img-git:hover {
+    animation: none;
+    color: #ffcc00;
     width: 175px;
     height: 175px;
-    padding: 0px 50px 0px 50px;
     -webkit-filter: grayscale(0%);
+    transition: width 0.5s ease, height 0.5s ease, -webkit-filter 0.5s ease;
 }
 
 #projetos, #contato{
@@ -350,3 +368,11 @@ p#nome-profissao{
         display: block;
     }
 }
+
+/* Ajuste para telas pequenas - 1 item por linha */
+@media screen and (max-width: 480px) {
+    .img-Habilidades {
+        grid-template-columns: 1fr;
+    }
+}
+
